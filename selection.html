@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instructions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="instructions">
+            <h3>Instructions</h3>
+            <h4>Please accept the Terms and Conditions by checking the checkbox</h4>
+            <p>
+                *) This quiz is based on multiple choice questions
+            </p>
+            <p>
+                *) There are 10 questions in this quiz.
+            </p>
+            <p>
+                *) Select an answer for every question.
+            </p>
+            <p>
+                *) Click on the Submit button at the bottom of the page to have your answers graded.
+            </p>
+            <p>
+                *) User will have 10 minutes to solve this quiz.
+            </p>
+            <p>
+                *) You will be shown your results at the end of the quiz.
+            </p>
+
+            <p>
+                *) If you want to try to get a better score, click the Try Again button at the bottom of the results page. You can try the quiz as many times as you like.
+            </p>
+
+            <div id="checkbox1">
+<form action="takeQuiz.html" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions'); return false; }">
+
+<input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions
+<br>
+<input type="submit" class="next-btn" name="submit" value="PROCEED FOR QUIZ" />
+
+</form>
+</div>  
+
+        </div>
+</body>
+</html>

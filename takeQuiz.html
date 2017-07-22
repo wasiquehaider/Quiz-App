@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz App</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <img src="img/logo.png" alt="">
+    <!--<img src="img/logo.png" alt="" style="float:right;">-->
+    <!--<img src="img/logo.png" alt="" style="position: absolute; right: 0px;bottom: 35%;">
+        <img src="img/logo.png" alt="" style="position: absolute; right: 0px;bottom: 0px;">
+        <img src="img/logo.png" alt="" style="position: absolute; left: 0px;bottom: 35%;">
+        <img src="img/logo.png" alt="" style="position: absolute; left: 0px;bottom: 0px;">-->
+<div id="clockdiv">
+
+            <div>
+                <span class="hours"></span>
+                <div class="smalltext">Hours</div>
+            </div>
+            <div>
+                <span class="minutes"></span>
+                <div class="smalltext">Minutes</div>
+            </div>
+            <div>
+                <span class="seconds"></span>
+                <div class="smalltext">Seconds</div>
+            </div>
+</div>
+    <div id="quizContainer" class="container">
+        
+        <!--<div class="title">Javascript Quiz</div>-->
+        <div id="question" class="question"></div>
+        <label class="option"><div class="signpost"><input type="radio" name="option" value="1" id="radio1"><span id="opt1"></span></div></label>
+        <label class="option"><div class="signpost"><input type="radio" name="option" value="2" id="radio2"><span id="opt2"></span></div><label>
+        <label class="option"><div class="signpost"><input type="radio" name="option" value="3" id="radio3"><span id="opt3"></span></div><label>
+        <label class="option"><div class="signpost"><input type="radio" name="option" value="4" id="radio4"><span id="opt4"></span></div><label>
+        <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next Question</button>
+     </div>
+     <div id="result" class="container result" style="display:none;"></div>
+      <button id="restartBtn" class="try-btn" onclick="restart();" style="display:none;">RESTART QUIZ</button>
+
+
+    <script src="js/questions.js"></script>
+    <script src="js/quiz-script.js"></script>
+    <script>
+     function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 10);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 1);
+  return {
+    'total': t,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 200);
+}
+
+var deadline = new Date(Date.parse(new Date()) + 15 * 1 * 10 * 60 * 1000);
+initializeClock('clockdiv', deadline);</script>
+
+</body>
+</html>

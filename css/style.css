@@ -1,0 +1,272 @@
+body{
+    font-family: 'Roboto Slab', serif;
+    background: #333366; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #333366	, #9400D3);
+  background: -moz-linear-gradient(right, #333366, #9400D3);
+  background: -o-linear-gradient(right, #333366, #9400D3);
+  background: linear-gradient(to left, #333366, 	#9400D3);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+
+.container{
+   height: 470px;
+    width: 900px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: transparent;
+    padding: 20px;
+    border: 1px solid #FF9933;
+    box-shadow: 0 0 8px 3px #fff;
+}
+
+.title{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #000000;
+    
+
+}
+
+
+.question{
+    padding: 20px;
+    font-size: 20px;
+    background: #000000;
+    margin: 10px 0 10px 0;
+    color: #FF9933;
+    width:85%;
+    height:16%;
+    margin:20px auto;
+    position: relative;
+    line-height: 100px;
+
+}
+
+img{
+    width: 15%;
+}
+
+.question:after { /*  our pseudo-element */
+  content:"";/* required */
+  position: absolute; /* takes the 'cap' out off flow */
+  top:0; /* stick it to top edge of the sign */
+  left:100%; /* push it way overto the right*/
+  height:0; /* we're doing this with borders remember */
+  width:0; 
+  border-width: 58px;
+  border-style:solid;
+  border-color:#000000; /* same as bg of our rectangle */
+  /* now we make some of theborders disappear*/
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-right-color:transparent;
+}
+
+.question:before { /*  our pseudo-element */
+  content:"";/* required */
+  position: absolute; /* takes the 'cap' out off flow */
+  top:0; /* stick it to top edge of the sign */
+  right:100%; /* push it way overto the right*/
+  height:0; /* we're doing this with borders remember */
+  width:0; 
+  border-width: 58px;
+  border-style:solid;
+  border-color:#000000; /* same as bg of our rectangle */
+  /* now we make some of theborders disappear*/
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+}
+
+
+.signpost{
+    width: 39%;
+    display: inline-block;
+    padding: 10px 0 10px 15px;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.5);
+    color: #000000;
+    height:50px;
+    margin:25px 40px;
+    position: relative;
+    line-height: 50px;
+}
+
+.signpost:after { /*  our pseudo-element */
+  content:"";/* required */
+  position: absolute; /* takes the 'cap' out off flow */
+  top:0; /* stick it to top edge of the sign */
+  left:100%; /* push it way overto the right*/
+  height:0; /* we're doing this with borders remember */
+  width:0; 
+  border-width: 35px;
+  border-style:solid;
+  border-color:rgba(255, 255, 255, 0.5); /* same as bg of our rectangle */
+  /* now we make some of theborders disappear*/
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-right-color:transparent;
+}
+
+.signpost:before { /*  our pseudo-element */
+  content:"";/* required */
+  position: absolute; /* takes the 'cap' out off flow */
+  top:0; /* stick it to top edge of the sign */
+  right:100%; /* push it way overto the right*/
+  height:0; /* we're doing this with borders remember */
+  width:0; 
+  border-width: 35px;
+  border-style:solid;
+  border-color:rgba(255, 255, 255, 0.5); /* same as bg of our rectangle */
+  /* now we make some of theborders disappear*/
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+}
+.signpost:hover{
+    background: #FF9933;
+    color: #f6f6f6;
+}
+
+.signpost:hover::before{
+content:"";/* required */
+  position: absolute; /* takes the 'cap' out off flow */
+  top:0; /* stick it to top edge of the sign */
+  right:100%; /* push it way overto the right*/
+  height:0; /* we're doing this with borders remember */
+  width:0; 
+  border-width: 35px;
+  border-style:solid;
+  border-color:#FF9933; /* same as bg of our rectangle */
+  /* now we make some of theborders disappear*/
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+}
+
+.signpost:hover::after{
+content:"";/* required */
+  position: absolute; /* takes the 'cap' out off flow */
+  top:0; /* stick it to top edge of the sign */
+  left:100%; /* push it way overto the right*/
+  height:0; /* we're doing this with borders remember */
+  width:0; 
+  border-width: 35px;
+  border-style:solid;
+  border-color:#FF9933; /* same as bg of our rectangle */
+  /* now we make some of theborders disappear*/
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-right-color:transparent;
+}
+
+
+
+.next-btn{
+    border:none;
+    outline: none;
+    background: rgba(0 , 0, 0, 0.5);
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+    color: #f6f6f6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+
+}
+
+.next-btn:hover{
+    background: #FF9933;
+    color: #000000;
+
+}
+
+.try-btn{
+    border:none;
+    outline: none;
+    background: rgba(0 , 0, 0, 0.5);
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 80px;    
+    margin: 0 auto;
+    color: #f6f6f6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+
+}
+
+.try-btn:hover{
+    background: #FF9933;
+    color: #000000;
+
+}
+
+
+
+.result{
+    height: 100px;
+    text-align: center;
+    font-size: 75px;
+}
+
+
+.option input::checked .option{
+    background: #FF9933;
+    color: #000;
+}
+
+/*Timer*/
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+	position: absolute;
+	right: 10px;
+    top: 10px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: mediumpurple;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: rebeccapurple;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+
+
+/*Quiz Selection */
+
+.instructions{
+    width: 70%;
+    background-color: mintcream;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    top: 100px;
+}
